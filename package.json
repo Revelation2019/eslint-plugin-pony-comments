@@ -1,0 +1,35 @@
+{
+  "name": "eslint-plugin-pony-comments",
+  "version": "1.0.6",
+  "description": "校验代码注释规范",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "comments"
+  ],
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "author": "zhousheng",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^4.29.0",
+    "object.fromentries": "^2.0.4",
+    "os": "^0.1.2",
+    "requireindex": "~1.1.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "mocha": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}
