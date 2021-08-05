@@ -1,0 +1,69 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\软件\Git\cmd;%NVM_HOME%;%NVM_SYMLINK%;C:\Users\pony\AppData\Local\Microsoft\WindowsApps;D:\软件\Microsoft VS Code\bin;C:\Users\pony\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.17.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.7.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\pony\AppData\Roaming\nvm\v14.17.4\node_modules\yarn\lib\cli.js:141390:19)
+      at Object.onceWrapper (events.js:519:28)
+      at ClientRequest.emit (events.js:400:28)
+      at TLSSocket.emitRequestTimeout (_http_client.js:790:9)
+      at Object.onceWrapper (events.js:519:28)
+      at TLSSocket.emit (events.js:412:35)
+      at TLSSocket.Socket._onTimeout (net.js:484:8)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7)
+
+npm manifest: 
+  {
+    "name": "eslint-plugin-pony-comments",
+    "version": "1.0.6",
+    "description": "校验代码注释规范",
+    "keywords": [
+      "eslint",
+      "eslintplugin",
+      "eslint-plugin",
+      "comments"
+    ],
+    "files": [
+      "lib",
+      "README.md"
+    ],
+    "author": "zhousheng",
+    "main": "lib/index.js",
+    "scripts": {
+      "test": "mocha tests --recursive"
+    },
+    "dependencies": {
+      "@typescript-eslint/parser": "^4.29.0",
+      "object.fromentries": "^2.0.4",
+      "os": "^0.1.2",
+      "requireindex": "~1.1.0",
+      "typescript": "^4.3.5"
+    },
+    "devDependencies": {
+      "eslint": "6.8.0",
+      "mocha": "^7.2.0"
+    },
+    "engines": {
+      "node": ">=0.10.0"
+    },
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
