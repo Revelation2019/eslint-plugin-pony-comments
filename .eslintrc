@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "plugins": [
+    "eslint-plugin"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:eslint-plugin/recommended"
+  ],
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "comma-style": [2, "last"],
+    "curly": [2, "multi-line"],
+    "eol-last": [2, "always"],
+    "eqeqeq": [2, "allow-null"],
+    "func-call-spacing": 2,
+    "indent": [2, 2],
+    "max-len": [1, 99, 2],
+    "no-cond-assign": [2, "always"],
+    "no-return-assign": [2, "always"],
+    "no-shadow": 1,
+    "no-var": 2,
+    "object-curly-spacing": [2, "always"],
+    "one-var": [2, "never"],
+    "prefer-const": 2,
+    "quotes": [2, "single", {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+    }],
+    "semi": [2, "always"],
+    "eslint-plugin/consistent-output": [
+        "error",
+        "always"
+    ],
+    "eslint-plugin/meta-property-ordering": "error",
+    "eslint-plugin/no-deprecated-context-methods": "error",
+    "eslint-plugin/no-deprecated-report-api": "off",
+    "eslint-plugin/prefer-replace-text": "error",
+    "eslint-plugin/report-message-format": "error",
+    "eslint-plugin/require-meta-schema": "error",
+    "eslint-plugin/require-meta-type": "error"
+  }
+}

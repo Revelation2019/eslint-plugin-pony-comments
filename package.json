@@ -10,7 +10,6 @@
   ],
   "files": [
     "dist",
-    "lib",
     "*.md",
     "LICENSE",
     "docs"
@@ -23,6 +22,7 @@
     "build": "babel --quiet lib --out-dir dist"
   },
   "dependencies": {
+    "eslint-plugin-eslint-plugin": "^3.5.3",
     "os": "^0.1.2",
     "requireindex": "~1.1.0",
     "typescript": "^4.3.5"
