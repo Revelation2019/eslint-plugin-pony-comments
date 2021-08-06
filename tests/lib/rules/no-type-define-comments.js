@@ -13,12 +13,16 @@ const ruleTester = new RuleTester(config);
 ruleTester.run('no-type-define-comments', rule, {
 
   valid: [
-    `interface IType {
+    `
+    /** 类型 */
+    interface IType {
             id: string; // id
             name: string; // 姓名
             age: number; // 年龄
         }`,
-    `interface IType {
+    `
+    /** 类型 */
+    interface IType {
             /** id */
             id: string;
             /** 姓名 */
@@ -36,8 +40,12 @@ ruleTester.run('no-type-define-comments', rule, {
         }
         `,
     `
-        /** 仓库信息类型 */
-        export type inventoryInfoType = IInventory | string;
+        /** 包邮 */
+        export type IPinkageType =
+        | 'ORDER_AMOUNT'
+        | 'PRODUCT_AMOUNT'
+        | 'ORDER_AMOUNT_SUBSIDY_LIMIT'
+        | 'NOLIMIT';
         `,
   ],
 
@@ -90,7 +98,11 @@ ruleTester.run('no-type-define-comments', rule, {
     },
     {
       code: `
-        export type inventoryInfoType = IInventory | string;
+        export type IPinkageType =
+        | 'ORDER_AMOUNT'
+        | 'PRODUCT_AMOUNT'
+        | 'ORDER_AMOUNT_SUBSIDY_LIMIT'
+        | 'NOLIMIT';
       `,
       errors: [{
         message: 'type定义的类型没有注释',

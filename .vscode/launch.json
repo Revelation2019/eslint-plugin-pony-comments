@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\tests\\lib\\rules\\no-function-comments.js"
+      "program": "${workspaceFolder}\\tests\\lib\\rules\\no-type-define-comments.js"
       // "program": "${workspaceFolder}\\lib\\index.js"
     }
   ]
