@@ -1,6 +1,6 @@
 /**
  * @fileoverview class组件和函数组件中定义的函数必须要有注释
- * @author 周胜A02313
+ * @author sheng zhou<sheng.zhou@casstime.com>
  */
 "use strict";
 

@@ -10,31 +10,41 @@
   ],
   "files": [
     "dist",
-    "README.md"
+    "*.md",
+    "LICENSE",
+    "docs"
   ],
-  "author": "zhousheng",
+  "author": "sheng zhou<sheng.zhou@casstime.com>",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha tests --recursive",
-    "build": "webpack --config webpack.config.js --progress --color"
+    "prebuild": "rimraf dist",
+    "build": "babel --quiet lib --out-dir dist"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^4.29.0",
-    "object.fromentries": "^2.0.4",
     "os": "^0.1.2",
     "requireindex": "~1.1.0",
-    "typescript": "^4.3.5",
-    "webpack": "^5.48.0",
-    "webpack-cli": "^4.7.2"
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^4.29.0",
+    "@babel/cli": "^7.14.8",
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "babel-preset-airbnb": "^5.0.0",
+    "rimraf": "^3.0.2",
     "eslint": "6.8.0",
     "mocha": "^7.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Revelation2019/eslint-plugin-pony-comments"
+  },
+  "bugs": {
+    "url": "https://github.com/Revelation2019/eslint-plugin-pony-comments/issues"
+  },
+  "homepage": "https://github.com/Revelation2019/eslint-plugin-pony-comments",
   "engines": {
     "node": ">=0.10.0"
   },

@@ -1,6 +1,6 @@
 /**
  * @fileoverview 没有类型定义单行注释
- * @author no-type-define-comments
+ * @author sheng zhou<sheng.zhou@casstime.com>
  */
 "use strict";
 

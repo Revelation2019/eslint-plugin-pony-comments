@@ -1,0 +1,5 @@
+{
+  "presets": ["airbnb"],
+  "sourceMaps": "inline",
+  "retainLines": true
+}
