@@ -15,6 +15,11 @@ ruleTester.run('no-function-comments', rule, {
 
   valid: [
     `
+    const getNowWidth = () => {
+      let nowWidth;
+    }
+    `,
+    `
         /** 提交 */
         export const submit = () => {}
         `,
