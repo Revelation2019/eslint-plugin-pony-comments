@@ -60,12 +60,29 @@ ruleTester.run('no-function-comments', rule, {
   invalid: [
     {
       code: `
+        const aaa = 11; // aaa
+
+        const submit = () => {}
+      `,
+      errors: [{
+        message: '函数必须要注释',
+        type: 'ArrowFunctionExpression',
+        options: ['Block'],
+      }],
+      output: `
+        const aaa = 11; // aaa
+        /** 提交 */
+        const submit = () => {}
+      `,
+    },
+    {
+      code: `
         export const Main = () => {}
       `,
       errors: [{
         message: '函数必须要注释',
         type: 'ArrowFunctionExpression',
-        options: ['Line'],
+        options: ['Block'],
       }],
       output: `
         /** Main */
