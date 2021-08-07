@@ -14,6 +14,9 @@ ruleTester.run('no-type-define-comments', rule, {
 
   valid: [
     `
+    export const Main = (props: { name: string }) => {}
+    `,
+    `
     /** 类型 */
     interface IType {
             id: string; // id
