@@ -1,4 +1,4 @@
-# 没有类型定义单行注释 (no-type-define-comments)
+# 校验枚举的注释 (no-enum-comments)
 
 Please describe the origin of the rule here.
 
