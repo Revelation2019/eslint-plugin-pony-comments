@@ -3,7 +3,7 @@
 Please describe the origin of the rule here.
 
 
-## Rule Details
+## 规则详情
 
 This rule aims to...
 

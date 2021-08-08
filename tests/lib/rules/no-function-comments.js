@@ -16,6 +16,13 @@ ruleTester.run('no-function-comments', rule, {
     {
       code: `
       /** 提交 */
+      function submit() {}
+      `,
+      options: ['always', { commentsType: 'Block' }],
+    },
+    {
+      code: `
+      /** 提交 */
       const submit = () => {
         let nowWidth;
       }
@@ -68,6 +75,20 @@ ruleTester.run('no-function-comments', rule, {
   ],
 
   invalid: [
+    {
+      code: `
+        function submit() {}
+      `,
+      errors: [{
+        message: '函数必须要注释',
+        type: 'FunctionDeclaration',
+      }],
+      options: ['always', { commentsType: 'Block' }],
+      output: `
+      /** 提交 */
+      function submit() {}
+      `,
+    },
     {
       code: `
         const aaa = 11; // aaa
