@@ -13,14 +13,17 @@ const ruleTester = new RuleTester(config);
 ruleTester.run('no-type-comments', rule, {
 
   valid: [
-    `
-    /** 包邮 */
-    export type IPinkageType =
-    | 'ORDER_AMOUNT'
-    | 'PRODUCT_AMOUNT'
-    | 'ORDER_AMOUNT_SUBSIDY_LIMIT'
-    | 'NOLIMIT';
-    `,
+    {
+      code: `
+        /** 包邮 */
+        export type IPinkageType =
+        | 'ORDER_AMOUNT'
+        | 'PRODUCT_AMOUNT'
+        | 'ORDER_AMOUNT_SUBSIDY_LIMIT'
+        | 'NOLIMIT';
+      `,
+      options: ['always', { commentsType : 'Block' }],
+    },
   ],
 
   invalid: [
@@ -36,6 +39,7 @@ ruleTester.run('no-type-comments', rule, {
         message: 'type定义的类型没有注释',
         type: 'TSTypeAliasDeclaration',
       }],
+      options: ['always', { commentsType : 'Block' }],
       output: `
         /** 包邮 */
         export type IPinkageType =

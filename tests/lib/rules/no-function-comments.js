@@ -15,60 +15,54 @@ ruleTester.run('no-function-comments', rule, {
   valid: [
     {
       code: `
-      /** 提交 */
-      function submit() {}
+        /** 提交 */
+        function submit() {}
       `,
       options: ['always', { commentsType: 'Block' }],
     },
     {
       code: `
-      /** 提交 */
-      const submit = () => {
-        let nowWidth;
-      }
+        /** 提交 */
+        const submit = () => {
+          let nowWidth;
+        }
       `,
       options: ['always', { commentsType: 'Block' }],
     },
     {
       code:  `
-      /** 提交 */
-      export const submit = () => {}
+        /** 提交 */
+        export const submit = () => {}
       `,
       options: ['always', { commentsType: 'Block' }],
     },
     {
       code: `
-      /** Main组件 */
-      const Main = (props: IProps) => {
+        /** Main组件 */
+        const Main = (props: IProps) => {
           useEffect(() => {});
-  
           /** 计时器 */
           const countDown = () => {}
-  
           /** 重置 */
           const reset = () => {}
-  
           /** 提交 */
           const submit = () => {}
-      }
+        }
       `,
       options: ['always', { commentsType: 'Block' }],
     },
     {
       code: `
-      class Main extends React.Component {
-  
+        class Main extends React.Component {
+          useEffect(() => {});
           /** 计时器 */
           countDown() {}
-  
           // 提交
           submit = () => {}
-  
           // 重置
           reset = () => {}
-  
           render() {}
-      }
+        }
       `,
       options: ['always', { commentsType: 'Line' }],
     },
@@ -85,14 +79,13 @@ ruleTester.run('no-function-comments', rule, {
       }],
       options: ['always', { commentsType: 'Block' }],
       output: `
-      /** 提交 */
-      function submit() {}
+        /** 提交 */
+        function submit() {}
       `,
     },
     {
       code: `
         const aaa = 11; // aaa
-
         const submit = () => {}
       `,
       errors: [{
@@ -123,13 +116,9 @@ ruleTester.run('no-function-comments', rule, {
     {
       code: `
         class Main extends React.Component {
-
           countDown() {}
-
           submit = () => {}
-
           reset = () => {}
-
           render() {}
         }
       `,
@@ -146,7 +135,6 @@ ruleTester.run('no-function-comments', rule, {
           submit = () => {}
           /** 重置 */
           reset = () => {}
-
           render() {}
         }
       `,
@@ -156,11 +144,8 @@ ruleTester.run('no-function-comments', rule, {
         /** Main组件 */
         const Main = (props: IProps) => {
           useEffect(() => {});
-
           const countDown = () => {}
-
           const reset = () => {}
-
           const submit = () => {}
         }
       `,
@@ -179,7 +164,6 @@ ruleTester.run('no-function-comments', rule, {
           const reset = () => {}
           /** 提交 */
           const submit = () => {}
-
           render() {}
         }
       `,

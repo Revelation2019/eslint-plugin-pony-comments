@@ -41,9 +41,9 @@ ruleTester.run('no-enum-comments', rule, {
     {
       code: `
         enum CouponType {
-					/** 打折 */
+          /** 打折 */
           DISCOUNT = 'DISCOUNT',
-					/** 满减 */
+          /** 满减 */
           REACH_AMOUNT_REDUCE = 'REACH_AMOUNT_REDUCE',
         }
       `,
@@ -64,14 +64,14 @@ ruleTester.run('no-enum-comments', rule, {
     },
     {
       code: `
-			/** 优惠券类型 */
-			enum CouponType {
-				DISCOUNT = 'DISCOUNT',
-				REACH_AMOUNT_REDUCE = 'REACH_AMOUNT_REDUCE',
-			}
+        /** 优惠券类型 */
+        enum CouponType {
+          DISCOUNT = 'DISCOUNT',
+          REACH_AMOUNT_REDUCE = 'REACH_AMOUNT_REDUCE',
+        }
       `,
       errors: [{
-        message: '枚举头部需要注释',
+        message: '枚举字段需要注释',
         type: 'TSEnumMember',
       }],
       options: ['always', { leadingCommentType: 'Block', propertyComments: { pos: 'lead', commentsType: 'Block' } }],
