@@ -1,4 +1,4 @@
-# 没有类型定义单行注释 (no-type-define-comments)
+# 没有类型定义单行注释 (no-type-comments)
 
 Please describe the origin of the rule here.
 
