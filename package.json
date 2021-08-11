@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-pony-comments",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "校验代码注释规范",
   "keywords": [
     "eslint",
