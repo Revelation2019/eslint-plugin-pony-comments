@@ -21,6 +21,21 @@ ruleTester.run('no-interface-comments', rule, {
     {
       code: `
         /** 类型 */
+        interface IType {
+          /** id */
+          id: string;
+          /** 姓名 */
+          name: string;
+          /** 年龄 */
+          age: number;
+          xxxxStore?: xxxStore;
+        }
+      `,
+      options: ['always', { leadingCommentType: 'Block', propertyComments: { pos: 'lead', commentsType: 'Block', ignore: ['Store'] } }],
+    },
+    {
+      code: `
+        /** 类型 */
         export interface IType {
           id: string; // id
           name: string; // 姓名
