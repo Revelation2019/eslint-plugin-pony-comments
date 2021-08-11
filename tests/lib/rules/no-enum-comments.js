@@ -1,6 +1,6 @@
 /**
  * @fileoverview 校验枚举的注释
- * @author sheng zhou<sheng.zhou@casstime.com>
+ * @author sheng zhou<zhousheng_zuel@163.com>
  */
 'use strict';
 

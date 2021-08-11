@@ -14,7 +14,7 @@
     "LICENSE",
     "docs"
   ],
-  "author": "sheng zhou<sheng.zhou@casstime.com>",
+  "author": "sheng zhou<zhousheng_zuel@163.com>",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha tests --recursive",

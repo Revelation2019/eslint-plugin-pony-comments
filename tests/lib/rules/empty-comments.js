@@ -1,6 +1,6 @@
 /**
  * @fileoverview 检查空内容注释
- * @author sheng zhou<sheng.zhou@casstime.com>
+ * @author sheng zhou<zhousheng_zuel@163.com>
  */
 'use strict';
 
