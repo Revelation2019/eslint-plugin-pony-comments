@@ -54,7 +54,6 @@ ruleTester.run('no-function-comments', rule, {
     {
       code: `
         class Main extends React.Component {
-          useEffect(() => {});
           /** 计时器 */
           countDown() {}
           // 提交
