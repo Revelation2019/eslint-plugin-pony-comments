@@ -16,6 +16,15 @@ ruleTester.run('no-function-comments', rule, {
     {
       code: `
         /** 提交 */
+        export async function submit(
+          param: IParam,
+        ): Promise<string> {}
+      `,
+      options: ['always', { commentsType: 'Block' }],
+    },
+    {
+      code: `
+        /** 提交 */
         function submit() {}
       `,
       options: ['always', { commentsType: 'Block' }],
