@@ -15,6 +15,14 @@ ruleTester.run('no-function-comments', rule, {
   valid: [
     {
       code: `
+        class InquirtBodyStore {
+          priorityStore: any;
+        }
+      `,
+      options: ['always', { commentsType: 'Block' }],
+    },
+    {
+      code: `
         /** 提交 */
         export async function submit(
           param: IParam,
