@@ -24,27 +24,43 @@ ruleTester.run('no-jsx-component-comments', rule, {
   valid: [
     {
       code: `
-         <div>test</div>
-       `,
-      options: ['always', { commentsType: 'Block' }],
-    },
-    {
-      code: `
-         /** Icon组件 */
-         <Icon type="epc" className={styles.icon} onClick={handleEpcIconClick} />
-       `,
-      options: ['always', { commentsType: 'Block' }],
-    },
-    {
-      code: `
-         /** 配件原图 */
+         {/** 配件原图 */}
          <OeImageModal
            data={oeData as OeImageData}
            visible={epcInitVisible}
            onBackdropClick={() => setEpcInitVisible(false)}
          />
        `,
-      options: ['always', { commentsType: 'Block' }],
+    },
+    {
+      code: `
+        const Demo = () => {
+          return <div>
+            {
+              {/** Index */}
+              [1,2,3].map(v => <Index num={v}></Index>)
+            }
+          </div>
+        }
+       `,
+    },
+    {
+      code: `
+        const Demo = () => {
+          return <div>
+            {
+              {/** */}
+              [1,2,3].map(v => <Index num={v}></Index>)
+            }
+          </div>
+        }
+       `,
+    },
+    {
+      code: `
+         {/** Icon组件 */}
+         <Icon type="epc" className={styles.icon} onClick={handleEpcIconClick} />
+       `,
     },
   ],
 
@@ -57,9 +73,8 @@ ruleTester.run('no-jsx-component-comments', rule, {
         message: '自定义组件或者业务组件必须要注释',
         type: 'JSXElement',
       }],
-      options: ['always', { commentsType: 'Block' }],
       output: `
-         /** Icon组件 */
+         {/** Icon组件 */}
          <Icon type="epc" className={styles.icon} onClick={handleEpcIconClick} />
        `,
     },
