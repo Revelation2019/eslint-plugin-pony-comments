@@ -62,6 +62,18 @@ ruleTester.run('no-interface-comments', rule, {
 
   invalid: [
     {
+      code: `export default interface XXX {}`,
+      errors: [{
+        message: 'interface头部必须加上注释',
+        type: 'TSInterfaceDeclaration',
+      }],
+      options: ['always', { leadingCommentType: 'Block', propertyComments: { pos: 'lead', commentsType: 'Block' } }],
+      output: `
+        /** 类型 */
+        export default interface XXX {}
+      `,
+    },
+    {
       code: `
         export interface IType {
           /** id */
